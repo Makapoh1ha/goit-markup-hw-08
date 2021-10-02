@@ -1,6 +1,22 @@
 .join {
-  display: block;
-  margin-left: 70px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 60px;
+  @media screen and (min-width: 768px) {
+    align-items: unset;
+    justify-content: unset;
+    margin-top: -60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+    margin-left: 70px;
+    text-align: unset;
+
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 .join__subtitle {
@@ -16,6 +32,10 @@
 
 .join__list {
   display: flex;
+  justify-content: center;
+  @media screen and (min-width: 1200px) {
+    justify-content: unset;
+  }
 }
 
 .join__style {
