@@ -10,6 +10,7 @@
 }
 
 .portfolio-card__item {
+  min-width: 320px;
   &:not(:last-child) {
     margin-bottom: 30px;
   }
