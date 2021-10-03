@@ -10,16 +10,14 @@
 .portfolio-button__list {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   justify-content: unset;
   &:first-child {
     margin-bottom: 15px;
     @media screen and (min-width: 768px) {
+      margin-bottom: 30px;
       justify-content: center;
     }
-  }
-  @media screen and (min-width: 1200px) {
-    margin-bottom: 50px;
   }
 }
 

@@ -48,6 +48,13 @@ img {
   padding: 0;
 }
 
+@media screen and (min-width: 320px) {
+  .container {
+    max-width: 320px;
+    padding: 0px 5px 0px 5px;
+  }
+}
+
 @media screen and (min-width: 480px) {
   .container {
     max-width: 480px;
@@ -107,11 +114,17 @@ img {
 
 .modal {
   position: absolute;
-  width: 450px;
-  min-height: 581px;
+  width: 310px;
   background-color: #ffffff;
   border-radius: 4px;
-  padding: 40px;
+  padding: 20px;
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+    padding: 40px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -376,122 +389,6 @@ img {
 
 .header-navi__button:hover, .header-navi__button:focus {
   fill: var(--blue);
-}
-
-.menu {
-  width: 100vw;
-  height: 100vh;
-  padding: 48px 0 48px 40px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform: translateX(0);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  background-color: var(--white);
-  z-index: 999;
-}
-
-@media screen and (min-width: 768px) {
-  .menu {
-    display: none;
-  }
-}
-
-.menu.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transform: translateX(100%);
-}
-
-.menu__close {
-  margin-bottom: 10px;
-  border: none;
-  background-color: var(--white);
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  right: 15px;
-  top: 10px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  fill: #000000;
-  cursor: pointer;
-}
-
-.menu__close:hover, .menu__close:focus {
-  fill: var(--blue);
-}
-
-.menu__link {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: calc(47 / 40);
-  letter-spacing: 0.02em;
-  color: var(--black);
-}
-
-.menu__link:hover, .menu__link:focus {
-  color: var(--blue);
-}
-
-.menu__link--active {
-  color: var(--blue);
-}
-
-.menu__item:not(:first-child) {
-  margin-top: 32px;
-}
-
-.menu-contacts {
-  margin-top: 302px;
-  margin-bottom: 64px;
-}
-
-.menu-contacts__item {
-  margin-bottom: 32px;
-}
-
-.menu-contacts__link {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 34px;
-  line-height: calc(40 / 34);
-  letter-spacing: 0.02em;
-  color: var(--blue);
-}
-
-.menu-contacts__link-mail {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 28px;
-  letter-spacing: 0.02em;
-  color: var(--grey);
-}
-
-.menu-contacts__item-social {
-  display: flex;
-}
-
-.menu-contacts__social:not(:last-child) {
-  padding-right: 10px;
-}
-
-.menu-contacts__social:not(:first-child) {
-  padding-left: 10px;
-  border-left: 1px solid rgba(33, 33, 33, 0.2);
-}
-
-.menu-contacts__social-link {
-  color: var(--blue);
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: calc(22 / 18);
-  letter-spacing: 0.02em;
 }
 
 .header-navi__web {
@@ -962,7 +859,6 @@ footer .container {
 
 @media screen and (min-width: 768px) {
   .team {
-    max-width: 768px;
     display: flex;
     flex-wrap: wrap;
   }
@@ -970,7 +866,6 @@ footer .container {
 
 @media screen and (min-width: 1200px) {
   .team {
-    max-width: 1200px;
     display: flex;
     padding-top: 94px;
     padding-bottom: 94px;
@@ -1272,7 +1167,6 @@ footer .container {
   margin-top: 60px;
   align-items: center;
   justify-content: center;
-  text-align: center;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1403,7 +1297,7 @@ footer .container {
 .portfolio-button__list {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   justify-content: unset;
 }
 
@@ -1413,13 +1307,8 @@ footer .container {
 
 @media screen and (min-width: 768px) {
   .portfolio-button__list:first-child {
+    margin-bottom: 30px;
     justify-content: center;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .portfolio-button__list {
-    margin-bottom: 50px;
   }
 }
 
@@ -1582,5 +1471,129 @@ footer .container {
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--grey);
+}
+
+.menu {
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 0 48px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(0);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: var(--white);
+  z-index: 999;
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    display: none;
+  }
+}
+
+.menu.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateX(100%);
+}
+
+.menu__close {
+  margin-bottom: 10px;
+  border: none;
+  background-color: var(--white);
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  fill: #000000;
+  cursor: pointer;
+}
+
+.menu__close:hover, .menu__close:focus {
+  fill: var(--blue);
+}
+
+.menu__link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: calc(47 / 40);
+  letter-spacing: 0.02em;
+  color: var(--black);
+}
+
+.menu__link:hover, .menu__link:focus {
+  color: var(--blue);
+}
+
+.menu__link--active {
+  color: var(--blue);
+}
+
+.menu__item:not(:first-child) {
+  margin-top: 32px;
+}
+
+.menu-contacts {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 480px) {
+  .menu-contacts {
+    margin-top: 302px;
+    margin-bottom: 64px;
+  }
+}
+
+.menu-contacts__item {
+  margin-bottom: 32px;
+}
+
+.menu-contacts__link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: calc(40 / 34);
+  letter-spacing: 0.02em;
+  color: var(--blue);
+}
+
+.menu-contacts__link-mail {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.02em;
+  color: var(--grey);
+}
+
+.menu-contacts__item-social {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu-contacts__social:not(:last-child) {
+  padding-right: 10px;
+}
+
+.menu-contacts__social:not(:first-child) {
+  padding-left: 10px;
+  border-left: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.menu-contacts__social-link {
+  color: var(--blue);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: calc(22 / 18);
+  letter-spacing: 0.02em;
 }
 /*# sourceMappingURL=main.css.map */
