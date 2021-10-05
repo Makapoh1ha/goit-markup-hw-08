@@ -10,6 +10,13 @@
 .header-navi {
   display: flex;
   align-items: center;
+  min-width: 310px;
+  @media screen and (min-width: 480px) {
+    min-width: 450px;
+  }
+  @media screen and (min-width: 768px) {
+    min-width: unset;
+  }
 }
 
 .header-navi__logo {
@@ -40,13 +47,14 @@
   background-color: var(--white);
   width: 40px;
   height: 40px;
-  position: absolute;
-  right: 10px;
-  top: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
   justify-content: center;
   align-items: center;
   display: flex;
   fill: #000000;
+  margin-left: auto;
+
   @media screen and (min-width: 768px) {
     display: none;
   }
